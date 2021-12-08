@@ -1,5 +1,5 @@
-# javascript-challenge
-# UFO Dataset Filter
+## javascript-challenge
+## UFO Dataset Filter
 
 This excercise uses JavaScript code to load UFO sighting data into HTML web page. 
 
