@@ -30,7 +30,7 @@ let form = d3.select("#form");
 form.on("change",runEnter);
 
 
-//--------------------funEnter Function--------------------//
+//--------------------runEnter Function--------------------//
 // Complete the event handler function for the form
 function runEnter() {
 
@@ -61,16 +61,19 @@ function runEnter() {
   });
 
   console.log(filteredData);
+  rebuildTable(filteredData);
+};
 
+//--------------------rebuildTable Function--------------------//
+function rebuildTable(data) {
   // Remove current table and show filtered table only
   tbody.selectAll("tr").remove();
 
-  filteredData.forEach((record) => {
+  data.forEach((record) => {
     let row = tbody.append("tr");
     Object.entries(record).forEach(([key, value]) => {
       let cell = row.append("td");
       cell.text(value);
     })
   });
-
 };
